@@ -1,0 +1,25 @@
+Respostas da Lista.
+
+1.
+	a. p++;    -- O ponteiro p deslocado uma posição a frente
+	b. (*p)++; -- O valor do ponteiro p mais 1
+	c. *(p++); -- O ponteiro p deslocado uma posição a frente
+
+2.
+	O valor final de y é 4.
+	p = &y;    // p aponta para o endereço de y
+	x = *p;    // x é igual ao valor que está no ponteiro p 
+	x = 4;     // x é igual a 4
+	(*p)++;    // o valor do ponteiro p mais 1
+	x--;       // o valor de x menos 1
+	(*p) += x; // o valor do ponteiro p é igual ao valor do ponteiro p mais o valor de x
+
+3.
+	O programa declara o vetor estático vet e o ponteiro f, um contador i e depois diz que o ponteiro f aponta para o vetor vet. 
+	O programa imprime na seguinte sequência os dados do vetor ver:
+		Contador
+		Valor na posição i acessado pelo vetor estático vet
+		Valor na posição i acessado pelo ponteiro f
+		Endereço do vetor estático vet na posição i
+		Endereço do ponteiro f na posição i
+	Os endereços são idênticos devido a f apontar para vet, logo a primeira posição de vet também é a primeira do ponteiro f.
