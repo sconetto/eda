@@ -29,10 +29,14 @@ TNo *incluiCabeca (TNo *pLista, int pValor) {
   pNovoNo = (TNo*) malloc(sizeof(TNo));
   pNovoNo->numero = pValor;
   pNovoNo->ant = NULL;
-  pNovoNo->prox = pLista;
-  pLista->ant = pNovoNo;
-  pLista = pNovoNo;
-  return pLista;
+  if (!vazia(pLista)) {
+    pNovoNo->prox = pLista;
+    pLista->ant = pNovoNo;
+    pLista = pNovoNo;
+    return pLista;
+  }
+  pNovoNo->prox = NULL;
+  return pNovoNo;
 }
 
 TNo *incluiCalda (TNo *pLista, int pValor) {
